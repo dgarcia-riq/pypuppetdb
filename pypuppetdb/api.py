@@ -5,7 +5,10 @@ import hashlib
 import json
 import logging
 from datetime import datetime, timedelta
-from urllib.parse import quote
+try:
+    from urllib.parse import urlparse
+except ImportError:
+     from urlparse import urlparse
 
 import requests
 
